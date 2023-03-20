@@ -122,7 +122,7 @@ You should only work on these after completing the core criteria above.
 - [Extension 4: SMS](./extension4.md)
 
 
-![](./assets/run-a-test.png)
+![](./assets/run_test_single.png)
 
 ## Test Output
 
