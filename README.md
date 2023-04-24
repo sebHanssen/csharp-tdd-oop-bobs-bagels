@@ -9,7 +9,7 @@
 
 ## Set up instructions
 - Fork this repository and clone the forked version to your machine
-- Open the root directory of the project in IntelliJ
+- Open the tdd-oop-bobs-bagels.sln in Visual Stuido
 - Your classes and tests should go in the usual places
 
 ## Exercise Requirements
