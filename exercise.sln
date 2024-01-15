@@ -3,17 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise.main", "exercise.main\exercise.main.csproj", "{AA503908-3F3F-4C1E-AA41-DD05B88DDBF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exercise.main", "exercise.main\exercise.main.csproj", "{AA503908-3F3F-4C1E-AA41-DD05B88DDBF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercise.tests", "exercise.tests\exercise.tests.csproj", "{D2678B46-EB41-4FBE-B9FB-48D5B51A28A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exercise.tests", "exercise.tests\exercise.tests.csproj", "{D2678B46-EB41-4FBE-B9FB-48D5B51A28A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{825CCFE7-4F2E-4770-8393-FEB732F66EE4}"
+	ProjectSection(SolutionItems) = preProject
+		extension1.md = extension1.md
+		extension2.md = extension2.md
+		extension3.md = extension3.md
+		extension4.md = extension4.md
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AA503908-3F3F-4C1E-AA41-DD05B88DDBF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +30,8 @@ Global
 		{D2678B46-EB41-4FBE-B9FB-48D5B51A28A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2678B46-EB41-4FBE-B9FB-48D5B51A28A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2678B46-EB41-4FBE-B9FB-48D5B51A28A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
