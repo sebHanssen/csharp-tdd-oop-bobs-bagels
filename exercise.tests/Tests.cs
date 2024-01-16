@@ -28,4 +28,18 @@ public class Tests
         //verify
         Assert.That(shop.basket.content[0].Name == "Onion Bagel");
     }
+
+    [Test]
+    public void BasketCount()
+    {
+        //Set Up
+        BagelShop shop = new BagelShop();
+        //Execute
+        shop.basket.add(shop.menu.bagels[0]);
+        shop.basket.add(shop.menu.bagels[1]);
+        shop.basket.add(shop.menu.bagels[1]);
+        shop.basket.add(shop.menu.bagels[1]);
+        //verify
+        Assert.That(shop.basket.content.Count() == 3);
+    }
 }
