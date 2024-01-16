@@ -61,3 +61,15 @@ I'd like to know the cost of a bagel before I add it to my basket.
 | BagelShop | checkPrice(product) | Returns price of product | Product exists         | double |
 |           |                     |                          | Product does not exist | null   |
 
+```
+8.
+As a customer,
+So I can shake things up a bit,
+I'd like to be able to choose fillings for my bagel.
+```
+| Classes | Methods                                    | Function              | Scenario                       | Output               |
+|---------|--------------------------------------------|-----------------------|--------------------------------|----------------------|
+| Basket  | addFilling(Product bagel, Product filling) | Adds filling to bagel | Bagel exists in basket         | filling added        |
+|         |                                            |                       | Bagel does not exist in basket | errorMessage changed |
+
+

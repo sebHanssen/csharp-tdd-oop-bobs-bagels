@@ -25,7 +25,7 @@ namespace exercise.main
                 ("FILS", 0.12, "Filling", "Smoked Salmon"),
                 ("FILH", 0.12, "Filling", "Ham")
             };
-        public List<Product> bagels = new List<Product>();
+        public List<Bagel> bagels = new List<Bagel>();
         public List<Product> coffee = new List<Product>();
         public List<Product> filling = new List<Product>();
         public Menu()
@@ -34,9 +34,9 @@ namespace exercise.main
             {
                 switch (item.Name)
                 {
-                    case "Bagel": bagels.Add(new Product(item.SKU, item.Price, item.Name, item.Variant)); break;
-                    case "Coffee": coffee.Add(new Product(item.SKU, item.Price, item.Name, item.Variant)); break;
-                    case "Filling": filling.Add(new Product(item.SKU, item.Price, item.Name, item.Variant)); break;
+                    case "Bagel": bagels.Add(new Bagel(item.SKU, item.Price, item.Name, item.Variant, null)); break;
+                    case "Coffee": coffee.Add(new Coffee(item.SKU, item.Price, item.Name, item.Variant)); break;
+                    case "Filling": filling.Add(new Filling(item.SKU, item.Price, item.Name, item.Variant)); break;
                 }
             }
         }

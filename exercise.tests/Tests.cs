@@ -100,4 +100,20 @@ public class Tests
         Assert.That(shop.checkPrice(shop.menu.bagels[0]) == 0.49);
         Assert.That(shop.checkPrice(shop.menu.bagels[1]) == 0.39);
     }
+    [Test]
+    public void AddFilling()
+    {
+        //Set Up
+        BagelShop shop = new BagelShop();
+        //Execute
+        shop.basket.add(shop.menu.bagels[0]);
+        shop.basket.add(shop.menu.bagels[1]);
+        shop.basket.add(shop.menu.bagels[1]);
+        shop.basket.addFilling(shop.basket.content[0], shop.menu.filling[0]);
+        shop.basket.addFilling(shop.menu.bagels[1], shop.menu.filling[0]);
+        shop.basket.addFilling(shop.menu.bagels[2], shop.menu.filling[0]);
+        //verify
+        Assert.That(shop.basket.total() == 1.63d);
+        Assert.That(shop.basket.errorMessage == "There is no Everything Bagel in your basket to add Bacon on");
+    }
 }
