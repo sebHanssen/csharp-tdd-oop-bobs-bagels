@@ -13,7 +13,7 @@ public class Tests
         shop.basket.add(shop.menu.bagels[0]);
         //verify
         Assert.That(shop.basket.content, Is.Not.Null);
-        Assert.That(shop.basket.content[0].Name == "Plain Bagel");
+        Assert.That(shop.basket.content[0].Variant == "Onion");
     }
 
     [Test]
@@ -26,7 +26,7 @@ public class Tests
         shop.basket.add(shop.menu.bagels[1]);
         shop.basket.remove(shop.menu.bagels[0]);
         //verify
-        Assert.That(shop.basket.content[0].Name == "Onion Bagel");
+        Assert.That(shop.basket.content[0].Variant == "Plain");
     }
 
     [Test]
@@ -75,7 +75,7 @@ public class Tests
         shop.basket.remove(shop.menu.bagels[0]);
         //verify
         Assert.That(shop.basket.content.Count() == 3);
-        Assert.That(shop.basket.errorMessage == "There is no Plain Bagel in your basket to remove");
+        Assert.That(shop.basket.errorMessage == "There is no Onion Bagel in your basket to remove");
     }
     [Test]
     public void Total()

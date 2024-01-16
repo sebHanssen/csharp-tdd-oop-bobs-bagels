@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -44,8 +45,13 @@ namespace exercise.main
             }
             else
             {
-                errorMessage = $"There is no {product.Name} in your basket to remove";
+                errorMessage = $"There is no {product.Variant} {product.Name} in your basket to remove";
             }
+        }
+
+        public double total()
+        {
+            return content.Sum(x => x.Price);
         }
     }
 }

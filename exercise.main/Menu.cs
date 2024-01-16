@@ -34,9 +34,9 @@ namespace exercise.main
             {
                 switch (item.Name)
                 {
-                    case "Bagel": bagels.Add(new Product(item.SKU, item.Price, item.Name, item.Variant)) break;
-                    case "Coffee": break;
-                    case "Filling": break;
+                    case "Bagel": bagels.Add(new Product(item.SKU, item.Price, item.Name, item.Variant)); break;
+                    case "Coffee": coffee.Add(new Product(item.SKU, item.Price, item.Name, item.Variant)); break;
+                    case "Filling": filling.Add(new Product(item.SKU, item.Price, item.Name, item.Variant)); break;
                 }
             }
         }
