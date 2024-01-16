@@ -24,6 +24,18 @@ namespace exercise.main
             }
         }
 
+        public void changeBasketLimit(int newLimit)
+        {
+            if (content.Count() < newLimit)
+            {
+                basketLimit = newLimit;
+            }
+            else
+            {
+                errorMessage = "Limit cannot be lower than current items in basket";
+            }
+        }
+
         public void remove(Product product)
         {
             if (content.Contains(product))
