@@ -77,4 +77,16 @@ public class Tests
         Assert.That(shop.basket.content.Count() == 3);
         Assert.That(shop.basket.errorMessage == "There is no Plain Bagel in your basket to remove");
     }
+    [Test]
+    public void Total()
+    {
+        //Set Up
+        BagelShop shop = new BagelShop();
+        //Execute
+        shop.basket.add(shop.menu.bagels[0]);
+        shop.basket.add(shop.menu.bagels[1]);
+        //verify
+        Assert.That(shop.basket.content.Count() == 2);
+        Assert.That(0.88d == shop.basket.total());
+    }
 }

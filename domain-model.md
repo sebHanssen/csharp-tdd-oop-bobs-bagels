@@ -39,3 +39,13 @@ I’d like to change the capacity of baskets.
 |------------|-------------------------|--------------------------|-------------------------------------------------------------------|----------------------------|
 | `Basket`   | `changeBasketlimit(int)`| Changes basket limit     | New basket limit is larger than current amount of items in basket | Basket limit changed       |
 |            |                         |                          | New basket limit is less than current amount of items in basket   | Basket limit not changed   |
+
+```
+6.
+As a customer,
+So I know how much money I need,
+I'd like to know the total cost of items in my basket.
+```
+| Classes | Methods | Function            | Scenario | Output |
+|---------|---------|---------------------|----------|--------|
+| Basket  | total() | Returns total price |          | double |
