@@ -11,7 +11,7 @@ I'd like to know when my basket is full when I try adding an item beyond my bask
 ```
 | Classes    | Methods            | Function                 | Scenario                | Outputs              |
 |------------|--------------------|--------------------------|-------------------------|----------------------|
-| `Basket`   | `add(bagel)`       | Adds bagel to basket     | Basket not full         | string               |
+| `Basket`   | `add(product)`     | Adds bagel to basket     | Basket not full         | string               |
 |            |                    |                          | Basket full             | errorMessage changed |
 
 ```

@@ -1,3 +1,5 @@
+using exercise.main;
+
 namespace exercise.tests;
 
 public class Tests
@@ -6,11 +8,11 @@ public class Tests
     public void AddBagel()
     {
         //Set Up
-        Basket basket = new Basket();
+        BagelShop shop = new BagelShop();
         //Execute
-        basket.add("Sugar Bagel");
+        shop.basket.add(shop.menu.bagels[0]);
         //verify
-        Assert.That(basket.content, Is.Not.Null);
-        Assert.That(basket.content[0] == "Sugar Bagel");
+        Assert.That(shop.basket.content, Is.Not.Null);
+        Assert.That(shop.basket.content[0].Name == "Plain Bagel");
     }
 }

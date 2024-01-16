@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace exercise.main
 {
-    internal class Basket
+    public class Basket
     {
+        public List<Product> content = new List<Product>();
+        public int basketLimit = 3;
+        public string errorMessage = "Unknown Error";
+        public void add(Product product)
+        {
+            if (content.Count() < basketLimit)
+            {
+                content.Add(product);
+            }
+            else
+            {
+                errorMessage = "Basket already full";
+            }
+        }
     }
 }
