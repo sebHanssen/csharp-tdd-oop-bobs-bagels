@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +21,18 @@ namespace exercise.main
             else
             {
                 errorMessage = "Basket already full";
+            }
+        }
+
+        public void remove(Product product)
+        {
+            if (content.Contains(product))
+            {
+                content.RemoveAll(x => x == product);
+            }
+            else
+            {
+                errorMessage = $"There is no {product.Name} in your basket to remove";
             }
         }
     }
