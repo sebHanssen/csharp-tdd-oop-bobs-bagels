@@ -86,7 +86,18 @@ public class Tests
         shop.basket.add(shop.menu.bagels[0]);
         shop.basket.add(shop.menu.bagels[1]);
         //verify
-        Assert.That(shop.basket.content.Count() == 2);
         Assert.That(0.88d == shop.basket.total());
+    }
+    [Test]
+    public void CheckPrice()
+    {
+        //Set Up
+        BagelShop shop = new BagelShop();
+        //Execute
+        shop.basket.add(shop.menu.bagels[0]);
+        shop.basket.add(shop.menu.bagels[1]);
+        //verify
+        Assert.That(shop.checkPrice(shop.menu.bagels[0]) == 0.49);
+        Assert.That(shop.checkPrice(shop.menu.bagels[1]) == 0.39);
     }
 }

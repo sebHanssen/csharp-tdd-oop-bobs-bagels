@@ -49,3 +49,15 @@ I'd like to know the total cost of items in my basket.
 | Classes | Methods | Function            | Scenario | Output |
 |---------|---------|---------------------|----------|--------|
 | Basket  | total() | Returns total price |          | double |
+
+```
+7.
+As a customer,
+So I know what the damage will be,
+I'd like to know the cost of a bagel before I add it to my basket.
+```
+| Classes   | Methods             | Function                 | Scenario               | Output |
+|-----------|---------------------|--------------------------|------------------------|--------|
+| BagelShop | checkPrice(product) | Returns price of product | Product exists         | double |
+|           |                     |                          | Product does not exist | null   |
+
