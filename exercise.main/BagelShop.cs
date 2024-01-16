@@ -10,5 +10,10 @@ namespace exercise.main
     {
         public Basket basket = new Basket();
         public Menu menu = new Menu();
+
+        public double checkPrice(Product product)
+        {
+            return product.Price;
+        }
     }
 }
