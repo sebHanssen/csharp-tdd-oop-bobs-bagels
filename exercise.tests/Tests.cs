@@ -120,4 +120,15 @@ public class Tests
         shop.basket.addFilling(shop.menu.coffee[0], shop.menu.filling[0]);
         Assert.That(shop.basket.errorMessage == "You can only put filling on a Bagel");
     }
+    [Test]
+    public void CheckFillingPrice()
+    {
+        //Set Up
+        BagelShop shop = new BagelShop();
+        //Execute
+        shop.basket.add(shop.menu.bagels[0]);
+        shop.basket.addFilling(shop.basket.content[0], shop.menu.filling[0]);
+        //verify
+        Assert.That(shop.basket.userQuery == "The price of this filling is 0.12$. Are you sure you want to add it?");
+    }
 }

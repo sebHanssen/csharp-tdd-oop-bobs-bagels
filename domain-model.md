@@ -67,6 +67,12 @@ As a customer,
 So I can shake things up a bit,
 I'd like to be able to choose fillings for my bagel.
 ```
+```
+9.
+As a customer,
+So I don't over-spend,
+I'd like to know the cost of each filling before I add it to my bagel order.
+```
 | Classes | Methods                                    | Function              | Scenario                       | Output               |
 |---------|--------------------------------------------|-----------------------|--------------------------------|----------------------|
 | Basket  | addFilling(Product bagel, Product filling) | Adds filling to bagel | Bagel exists in basket         | filling added        |
