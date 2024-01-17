@@ -53,6 +53,12 @@ As a customer,
 So I know how much money I need,
 I'd like to know the total cost of items in my basket.
 ```
+```
+Extension1.
+As a customer,
+So I can save money,
+I'd like to know the total cost of items in my basket after discounts are applied.
+```
 | Classes | Methods | Function            | Scenario | Output |
 |---------|---------|---------------------|----------|--------|
 | Basket  | total() | Returns total price |          | double |

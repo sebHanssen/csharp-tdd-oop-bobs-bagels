@@ -142,4 +142,24 @@ public class Tests
         Assert.That(shop.basket.content.Count(), Is.EqualTo(0));
         Assert.That(shop.basket.errorMessage, Is.EqualTo("This product does not exist in our menu."));
     }
+    [Test]
+    public void ApplyDiscounts()
+    {
+        //Set Up
+        BagelShop shop = new BagelShop();
+        //Execute
+        shop.basket.add("BGLO", 8);
+        shop.basket.add("BGLP", 12);
+        shop.basket.add("COFB", 2);
+        shop.basket.add("COFC", 1);
+        //verify
+        Assert.That(Math.Round(9.46d, 2), Is.EqualTo(shop.basket.total()));
+        /*
+        BGLO * 6 = Discounted for 2.49 (6 Bagel offer)
+        BGLO * 1 + COFB * 1 = Discounted for 1.25 (Coffee + Bagel offer)
+        BGLO * 1 + COFC * 1 = Discounted for 1.25 (Coffee + Bagel offer)
+        BGLP * 12 = Discounted 3.49 (12 Bagel offer)
+        COFB * 1 = No discount, 0.99
+        */
+    }
 }
