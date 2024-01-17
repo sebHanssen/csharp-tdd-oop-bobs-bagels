@@ -131,4 +131,15 @@ public class Tests
         //verify
         Assert.That(shop.basket.userQuery, Is.EqualTo("The price of this filling is 0,12$. Are you sure you want to add it?"));
     }
+    [Test]
+    public void CheckMenu()
+    {
+        //Set Up
+        BagelShop shop = new BagelShop();
+        //Execute
+        shop.basket.add(new Coffee("jfdsfgdsl", 123.23, "white coffee", "sdfasdf"));
+        //verify
+        Assert.That(shop.basket.content.Count(), Is.EqualTo(0));
+        Assert.That(shop.basket.errorMessage, Is.EqualTo("This product does not exist in our menu."));
+    }
 }

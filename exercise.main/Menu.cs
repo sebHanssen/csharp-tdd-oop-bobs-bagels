@@ -8,7 +8,7 @@ namespace exercise.main
 {
     public class Menu
     {
-        List<(string SKU, double Price, string Name, string Variant)> items = new List<(string, double, string, string)>
+        public List<(string SKU, double Price, string Name, string Variant)> products = new List<(string, double, string, string)>
             {
                 ("BGLO", 0.49, "Bagel", "Onion"),
                 ("BGLP", 0.39, "Bagel", "Plain"),
@@ -30,7 +30,7 @@ namespace exercise.main
         public List<Filling> filling = new List<Filling>();
         public Menu()
         {
-            foreach (var item in items)
+            foreach (var item in products)
             {
                 switch (item.Name)
                 {

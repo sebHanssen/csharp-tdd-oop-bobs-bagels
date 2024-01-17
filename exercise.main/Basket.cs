@@ -11,6 +11,7 @@ namespace exercise.main
     public class Basket
     {
         public List<Product> content = new List<Product>();
+        public Menu menu = new Menu();
         public int basketLimit = 3;
         public string errorMessage = "Unknown Error";
         public string userQuery = "";
@@ -18,7 +19,13 @@ namespace exercise.main
         {
             if (content.Count() < basketLimit)
             {
-                content.Add(product);
+                if (!menu.products.Contains((product.Sku, product.Price, product.Name, product.Variant))){
+                    errorMessage = "This product does not exist in our menu.";
+                } else
+                {
+                    content.Add(product);
+                }
+                
             }
             else
             {

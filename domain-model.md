@@ -9,10 +9,17 @@ As a member of the public,
 So that I can not overfill my small bagel basket
 I'd like to know when my basket is full when I try adding an item beyond my basket capacity.
 ```
+```
+10.
+As the manager,
+So we don't get any weird requests,
+I want customers to only be able to order things that we stock in our inventory.
+```
 | Classes    | Methods            | Function                 | Scenario                | Outputs              |
 |------------|--------------------|--------------------------|-------------------------|----------------------|
-| `Basket`   | `add(product)`     | Adds bagel to basket     | Basket not full         | string               |
+| `Basket`   | `add(product)`     | Adds product to basket   | Basket not full         | string               |
 |            |                    |                          | Basket full             | errorMessage changed |
+|            |                    |                          | Product is not on menu  | errorMessage changed |
 
 ```
 2.
