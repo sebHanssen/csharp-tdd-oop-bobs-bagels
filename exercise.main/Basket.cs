@@ -13,6 +13,7 @@ namespace exercise.main
         public List<Product> content = new List<Product>();
         public int basketLimit = 3;
         public string errorMessage = "Unknown Error";
+        public string userQuery = "";
         public void add(Product product)
         {
             if (content.Count() < basketLimit)
@@ -36,6 +37,7 @@ namespace exercise.main
             } else
             {
                 Bagel bagel = item as Bagel;
+                userQuery = $"The price of this filling is {Math.Round(filling.Price, 2)}$. Are you sure you want to add it?";
                 bagel.addFilling(filling);
             }
             

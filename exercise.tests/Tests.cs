@@ -129,6 +129,6 @@ public class Tests
         shop.basket.add(shop.menu.bagels[0]);
         shop.basket.addFilling(shop.basket.content[0], shop.menu.filling[0]);
         //verify
-        Assert.That(shop.basket.userQuery == "The price of this filling is 0.12$. Are you sure you want to add it?");
+        Assert.That(shop.basket.userQuery, Is.EqualTo("The price of this filling is 0,12$. Are you sure you want to add it?"));
     }
 }
