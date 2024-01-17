@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace exercise.main
 {
-    public class Product
+    public abstract class Product
     {
         private string _sku;
         private double _price;

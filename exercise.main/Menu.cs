@@ -26,15 +26,15 @@ namespace exercise.main
                 ("FILH", 0.12, "Filling", "Ham")
             };
         public List<Bagel> bagels = new List<Bagel>();
-        public List<Product> coffee = new List<Product>();
-        public List<Product> filling = new List<Product>();
+        public List<Coffee> coffee = new List<Coffee>();
+        public List<Filling> filling = new List<Filling>();
         public Menu()
         {
             foreach (var item in items)
             {
                 switch (item.Name)
                 {
-                    case "Bagel": bagels.Add(new Bagel(item.SKU, item.Price, item.Name, item.Variant, null)); break;
+                    case "Bagel": bagels.Add(new Bagel(item.SKU, item.Price, item.Name, item.Variant, new List<Filling>())); break;
                     case "Coffee": coffee.Add(new Coffee(item.SKU, item.Price, item.Name, item.Variant)); break;
                     case "Filling": filling.Add(new Filling(item.SKU, item.Price, item.Name, item.Variant)); break;
                 }

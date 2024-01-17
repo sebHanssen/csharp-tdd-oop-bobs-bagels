@@ -109,11 +109,15 @@ public class Tests
         shop.basket.add(shop.menu.bagels[0]);
         shop.basket.add(shop.menu.bagels[1]);
         shop.basket.add(shop.menu.bagels[1]);
+        shop.basket.changeBasketLimit(4);
+        shop.basket.add(shop.menu.coffee[0]);
         shop.basket.addFilling(shop.basket.content[0], shop.menu.filling[0]);
         shop.basket.addFilling(shop.menu.bagels[1], shop.menu.filling[0]);
         shop.basket.addFilling(shop.menu.bagels[2], shop.menu.filling[0]);
         //verify
-        Assert.That(shop.basket.total() == 1.63d);
-        Assert.That(shop.basket.errorMessage == "There is no Everything Bagel in your basket to add Bacon on");
+        Assert.That(shop.basket.total(), Is.EqualTo(Math.Round(2.62d, 2)));
+        Assert.That(shop.basket.errorMessage == "There is no Everything Bagel in your basket to add Bacon on.");
+        shop.basket.addFilling(shop.menu.coffee[0], shop.menu.filling[0]);
+        Assert.That(shop.basket.errorMessage == "You can only put filling on a Bagel");
     }
 }

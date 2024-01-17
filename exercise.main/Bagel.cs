@@ -15,5 +15,10 @@ namespace exercise.main
             _fillings = fillings;
         }
         public List<Filling> Fillings { get { return _fillings; } set { _fillings = value; } }
+        public void addFilling(Filling filling)
+        {
+            Price = Price + filling.Price;
+            Fillings.Add(filling);
+        }
     }
 }

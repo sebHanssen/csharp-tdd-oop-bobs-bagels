@@ -25,6 +25,22 @@ namespace exercise.main
             }
         }
 
+        public void addFilling(Product item, Filling filling)
+        {
+            if (!content.Contains(item))
+            {
+                errorMessage = $"There is no {item.Variant} {item.Name} in your basket to add {filling.Variant} on.";
+            } else if (item.Name != "Bagel")
+            {
+                errorMessage = $"You can only put filling on a Bagel";
+            } else
+            {
+                Bagel bagel = item as Bagel;
+                bagel.addFilling(filling);
+            }
+            
+        }
+
         public void changeBasketLimit(int newLimit)
         {
             if (content.Count() < newLimit)
@@ -51,7 +67,7 @@ namespace exercise.main
 
         public double total()
         {
-            return content.Sum(x => x.Price);
+            return Math.Round(content.Sum(x => x.Price), 2);
         }
     }
 }
