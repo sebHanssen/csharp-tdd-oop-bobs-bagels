@@ -19,7 +19,7 @@ namespace exercise.main
         {
             if (content.Count() < basketLimit)
             {
-                if (!menu.products.Contains((product.Sku, product.Price, product.Name, product.Variant))){
+                if (!menu.menuList.Contains((product.Sku, product.Price, product.Name, product.Variant))){
                     errorMessage = "This product does not exist in our menu.";
                 } else
                 {
@@ -30,6 +30,30 @@ namespace exercise.main
             else
             {
                 errorMessage = "Basket already full";
+            }
+        }
+
+        public void add(string sku, int amount)
+        {
+            if (!menu.products.Any(x => sku == x.Sku))
+            {
+                errorMessage = "This product does not exist in our menu.";
+            }
+            else
+            {
+                var item = menu.products.Where(x => sku == x.Sku).FirstOrDefault();
+                for (int i = 0; i < amount; i++)
+                {
+                    if (content.Count() < basketLimit)
+                    {
+                        content.Add(item);
+                    }
+                    else
+                    {
+                        errorMessage = "Basket already full";
+                        break;
+                    }
+                }
             }
         }
 
@@ -77,7 +101,17 @@ namespace exercise.main
 
         public double total()
         {
+            var uniqueContent = content.Distinct().ToList();
+            
+            content.Where(x => )
             return Math.Round(content.Sum(x => x.Price), 2);
+        }
+
+        public List<List<Product>> findDiscounts()
+        {
+            var uniqueContent = content.Distinct().ToList();
+            content.Where(x => )
+            return;
         }
     }
 }

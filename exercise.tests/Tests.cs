@@ -148,12 +148,13 @@ public class Tests
         //Set Up
         BagelShop shop = new BagelShop();
         //Execute
+        shop.basket.changeBasketLimit(30);
         shop.basket.add("BGLO", 8);
         shop.basket.add("BGLP", 12);
         shop.basket.add("COFB", 2);
         shop.basket.add("COFC", 1);
         //verify
-        Assert.That(Math.Round(9.46d, 2), Is.EqualTo(shop.basket.total()));
+        Assert.That(shop.basket.total(), Is.EqualTo(Math.Round(9.46d, 2)));
         /*
         BGLO * 6 = Discounted for 2.49 (6 Bagel offer)
         BGLO * 1 + COFB * 1 = Discounted for 1.25 (Coffee + Bagel offer)

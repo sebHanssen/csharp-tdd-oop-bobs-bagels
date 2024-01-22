@@ -8,7 +8,8 @@ namespace exercise.main
 {
     public class Menu
     {
-        public List<(string SKU, double Price, string Name, string Variant)> products = new List<(string, double, string, string)>
+        public List <Product> products = new List <Product> ();
+        public List<(string SKU, double Price, string Name, string Variant)> menuList = new List<(string, double, string, string)>
             {
                 ("BGLO", 0.49, "Bagel", "Onion"),
                 ("BGLP", 0.39, "Bagel", "Plain"),
@@ -30,13 +31,13 @@ namespace exercise.main
         public List<Filling> filling = new List<Filling>();
         public Menu()
         {
-            foreach (var item in products)
+            foreach (var item in menuList)
             {
                 switch (item.Name)
                 {
-                    case "Bagel": bagels.Add(new Bagel(item.SKU, item.Price, item.Name, item.Variant, new List<Filling>())); break;
-                    case "Coffee": coffee.Add(new Coffee(item.SKU, item.Price, item.Name, item.Variant)); break;
-                    case "Filling": filling.Add(new Filling(item.SKU, item.Price, item.Name, item.Variant)); break;
+                    case "Bagel": bagels.Add(new Bagel(item.SKU, item.Price, item.Name, item.Variant, new List<Filling>())); products.Add(new Bagel(item.SKU, item.Price, item.Name, item.Variant, new List<Filling>())); break;
+                    case "Coffee": coffee.Add(new Coffee(item.SKU, item.Price, item.Name, item.Variant)); products.Add(new Coffee(item.SKU, item.Price, item.Name, item.Variant)); break;
+                    case "Filling": filling.Add(new Filling(item.SKU, item.Price, item.Name, item.Variant)); products.Add(new Filling(item.SKU, item.Price, item.Name, item.Variant)); break;
                 }
             }
         }
